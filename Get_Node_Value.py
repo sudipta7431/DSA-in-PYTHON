@@ -38,20 +38,16 @@ def print_singly_linked_list(node, sep, fptr):
 
 def getNode(llist, posi):
     # Write your code here
-    n = llist
-    count = 0
-    j = []
-    if n.next is None and count == 0:
-        count += 1
-        j.append(n.data)
+        n = llist
+    d = []
+    if n.next is None:
+        return n.data
     else:
         while(n.next is not None):
-            j.append(n.data)
+            d.append(n.data)
             n = n.next
-    j.append(n.data)
-    a = len(j)
-    node_value = j[a-posi-1]
-    return str(node_value)
+        d.append(n.data)
+    return d[len(d)-posi-1]
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
