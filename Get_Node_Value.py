@@ -38,7 +38,7 @@ def print_singly_linked_list(node, sep, fptr):
 
 def getNode(llist, posi):
     # Write your code here
-        n = llist
+    n = llist
     d = []
     if n.next is None:
         return n.data
